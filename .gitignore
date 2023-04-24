@@ -3,3 +3,5 @@ fab/
 *.xml
 *.log
 lib/3rdparty/*
+*.step
+*.x3d
