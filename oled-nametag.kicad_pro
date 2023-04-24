@@ -124,7 +124,7 @@
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.19999999999999998,
         "min_track_width": 0.127,
-        "min_via_annular_width": 0.125,
+        "min_via_annular_width": 0.049999999999999996,
         "min_via_diameter": 0.44999999999999996,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
@@ -185,7 +185,7 @@
         },
         {
           "diameter": 0.45,
-          "drill": 0.2
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false

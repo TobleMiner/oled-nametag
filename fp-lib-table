@@ -8,4 +8,5 @@
   (lib (name "ToolingHole")(type "KiCad")(uri "${KIPRJMOD}/lib/ToolingHole.pretty")(options "")(descr ""))
   (lib (name "Sensor_Vishay")(type "KiCad")(uri "${KIPRJMOD}/lib/Sensor_Vishay.pretty")(options "")(descr ""))
   (lib (name "Package_LGA_ST")(type "KiCad")(uri "${KIPRJMOD}/lib/Package_LGA_ST.pretty")(options "")(descr ""))
+  (lib (name "Package_QFN_ESP32")(type "KiCad")(uri "${KIPRJMOD}/lib/Package_QFN_ESP32.pretty")(options "")(descr ""))
 )

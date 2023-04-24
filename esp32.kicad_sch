@@ -3161,7 +3161,7 @@
     (property "Value" "ESP32-S3" (at 87.0459 154.6465 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm_EP4x4mm_ThermalVias" (at 100.33 69.85 0)
+    (property "Footprint" "Package_QFN_ESP32:QFN-56-1EP_7x7mm_P0.4mm_EP4x4mm_ThermalVias_0.3mm" (at 100.33 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 100.33 69.85 0)
