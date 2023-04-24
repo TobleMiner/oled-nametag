@@ -3316,6 +3316,31 @@
     )
   )
 
+  (symbol (lib_id "power:GND1") (at 128.27 123.19 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 1d1a1b73-7d36-447d-8aac-7b90a4ba3f93)
+    (property "Reference" "#PWR035" (at 128.27 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND1" (at 128.27 127.3255 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 128.27 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 128.27 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ac6c6ecc-aa22-4a46-b4ea-2043bc3dcd28))
+    (instances
+      (project "oled-nametag"
+        (path "/c0b8a503-1da4-4e1a-941c-dddf39a5c519/b1f1b085-615b-4d75-b80e-4b089a5e74f7"
+          (reference "#PWR035") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:VBUS") (at 22.86 45.72 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 20960050-be75-4cb0-a900-d37b7c9d03a0)
@@ -3908,36 +3933,6 @@
       (project "oled-nametag"
         (path "/c0b8a503-1da4-4e1a-941c-dddf39a5c519/b1f1b085-615b-4d75-b80e-4b089a5e74f7"
           (reference "C34") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 128.27 123.19 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 558aa69a-dd53-400c-be89-a81ea736013a)
-    (property "Reference" "#PWR0210" (at 128.27 129.54 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 128.143 127.5842 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 128.27 123.19 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 128.27 123.19 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 4090a6fe-5e25-422c-9b51-47800c576de0))
-    (instances
-      (project "rgb-led-nametag-48x16"
-        (path "/751d823e-1d7b-4501-9658-d06d459b0e16"
-          (reference "#PWR0210") (unit 1)
-        )
-      )
-      (project "oled-nametag"
-        (path "/c0b8a503-1da4-4e1a-941c-dddf39a5c519/b1f1b085-615b-4d75-b80e-4b089a5e74f7"
-          (reference "#PWR035") (unit 1)
         )
       )
     )
