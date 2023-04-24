@@ -2067,7 +2067,6 @@
   )
 
   (no_connect (at 146.05 100.33) (uuid 516f0434-11dd-489b-b499-4bee9a003a02))
-  (no_connect (at 128.27 115.57) (uuid 688a47ca-8603-43b5-a9c3-045ffcabc560))
   (no_connect (at 146.05 95.25) (uuid b4fb46bd-744d-42c9-aa03-aba027ea4b7d))
   (no_connect (at 161.29 168.91) (uuid dc946ce3-176e-4912-a7c6-9fb497c33ec7))
 
@@ -2398,6 +2397,10 @@
   (wire (pts (xy 237.49 33.02) (xy 237.49 41.91))
     (stroke (width 0) (type default))
     (uuid 638d46ce-6b84-4540-816e-9077996372d6)
+  )
+  (wire (pts (xy 128.27 115.57) (xy 128.27 118.11))
+    (stroke (width 0) (type default))
+    (uuid 649605cb-0b67-43fd-8b3c-02a1d526e19c)
   )
   (wire (pts (xy 123.19 100.33) (xy 128.27 100.33))
     (stroke (width 0) (type default))
@@ -3848,6 +3851,36 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 128.27 123.19 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 558aa69a-dd53-400c-be89-a81ea736013a)
+    (property "Reference" "#PWR0210" (at 128.27 129.54 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 128.143 127.5842 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 128.27 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 128.27 123.19 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 4090a6fe-5e25-422c-9b51-47800c576de0))
+    (instances
+      (project "rgb-led-nametag-48x16"
+        (path "/751d823e-1d7b-4501-9658-d06d459b0e16"
+          (reference "#PWR0210") (unit 1)
+        )
+      )
+      (project "oled-nametag"
+        (path "/c0b8a503-1da4-4e1a-941c-dddf39a5c519/b1f1b085-615b-4d75-b80e-4b089a5e74f7"
+          (reference "#PWR035") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+BATT") (at 106.68 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 55fc8077-b4a7-41ce-aee4-55700420f783)
@@ -4563,7 +4596,7 @@
     (property "Value" "BQ27546" (at 137.16 109.22 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_DSBGA:DSBGA-15_BQ27546_1.95x2.6mm_P0.5mm" (at 137.16 104.14 0)
+    (property "Footprint" "Package_DSBGA:DSBGA-15_BQ27546_I2C_1.95x2.6mm_P0.5mm" (at 137.16 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 128.27 107.95 0)
@@ -4591,6 +4624,40 @@
       (project "oled-nametag"
         (path "/c0b8a503-1da4-4e1a-941c-dddf39a5c519/b1f1b085-615b-4d75-b80e-4b089a5e74f7"
           (reference "U10") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R_Small") (at 128.27 120.65 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 982c180c-50a6-4749-b807-f1361406114f)
+    (property "Reference" "R21" (at 126.7714 119.4816 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "10k" (at 126.7714 121.793 0)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 128.27 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 128.27 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C25744" (at 128.27 120.65 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2c8cf458-f966-4800-ae50-8abf2e309a9c))
+    (pin "2" (uuid ff75f099-f30e-4cd8-87fa-f05dae5147ae))
+    (instances
+      (project "rgb-led-nametag-48x16"
+        (path "/751d823e-1d7b-4501-9658-d06d459b0e16"
+          (reference "R21") (unit 1)
+        )
+      )
+      (project "oled-nametag"
+        (path "/c0b8a503-1da4-4e1a-941c-dddf39a5c519/b1f1b085-615b-4d75-b80e-4b089a5e74f7"
+          (reference "R33") (unit 1)
         )
       )
     )
