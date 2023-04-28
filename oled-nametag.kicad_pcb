@@ -5578,7 +5578,7 @@
     (property "ki_keywords" "Buck-Boost fixed 3.3V converter")
     (path "/b1f1b085-615b-4d75-b80e-4b089a5e74f7/47bebefb-4404-4223-9106-2119746c23c1")
     (attr smd)
-    (fp_text reference "U11" (at 0.02032 -2.7 180) (layer "F.SilkS")
+    (fp_text reference "U11" (at 0.02032 -2.7 180) (layer "F.SilkS") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 87ff4743-d3d3-46a1-8838-b5b4bd00ee1c)
     )
