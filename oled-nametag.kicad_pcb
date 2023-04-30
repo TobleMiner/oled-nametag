@@ -4785,7 +4785,7 @@
     (property "Sheetname" "Power")
     (path "/b1f1b085-615b-4d75-b80e-4b089a5e74f7/ecf5719a-c207-4851-868f-68eb08d45a4c")
     (attr smd)
-    (fp_text reference "U8" (at 0.02032 -2.7) (layer "F.SilkS")
+    (fp_text reference "U8" (at 0.02032 -2.7) (layer "F.SilkS") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 41c0e51e-c7ae-44a2-94f9-7e60f8c01658)
     )
