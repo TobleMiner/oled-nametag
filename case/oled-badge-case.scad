@@ -5,10 +5,14 @@ WALL_THICKNESS_BOTTOM = 0.8;
 BOARD_WIDTH = 88;
 BOARD_HEIGHT = 30;
 BOARD_DEPTH = 8.5;
+CASE_HEIGHT_BOTTOM = 6.7;
+CASE_HEIGHT_TOP = 1.8;
 BOARD_OVERSIZE = 0.4;
 BUTTON_BASE_THICKNESS = 0.8;
 BUTTON_ACTUATOR_LENGTH = 0.8;
 BUTTON_ACTUATION = 0.6;
+SCREW_HEAD_SIZE = 2.5; // non-oversized: 2
+SCREW_HOLE_SIZE = 1.5; // non-oversized: 1.2
 
 module button() {
     color("brown") {
@@ -56,7 +60,7 @@ module board() {
             // Audio port
             translate([41, 30 + 3, 2]) rotate([90, 0, 0]) cylinder(3, 0.75, 0.75, $fn=100);
             // Light sensor
-            translate([33.5, 30, 0.5]) cube([3, 2, 1.5 + 0.5]);
+            translate([33.5, 30, 0.25]) cube([3, 2, 1.5 + 0.5]);
             translate([0, 0, 0.5]) {
                 // Buttons right
                 translate([body_width, 4.6, 0]) switch_and_button_mirrored();
@@ -73,22 +77,22 @@ module screw_thread() {
 }
 
 module screw_hole() {
-    cylinder(100, 0.6, 0.6, $fn=100);
-    translate([0, 0, 2]) cylinder(100, 1, 1, $fn=100);
+    cylinder(100, SCREW_HOLE_SIZE/2, SCREW_HOLE_SIZE/2, $fn=100);
+    translate([0, 0, 2]) cylinder(100, SCREW_HEAD_SIZE/2, SCREW_HEAD_SIZE/2, $fn=100);
 }
 
 module top_cover() {
         width = BOARD_WIDTH + BOARD_OVERSIZE + WALL_THICKNESS_LEFT_RIGHT * 2 + BUTTON_ACTUATOR_LENGTH * 2 + BUTTON_BASE_THICKNESS * 2;
         height = BOARD_HEIGHT + BOARD_OVERSIZE + WALL_THICKNESS_FRONT_BACK * 2;
-        depth = 1.8 /* board */ + 1 /* magnet */ + WALL_THICKNESS_TOP;
-        mic_pos = [width / 2 - 1.5, height - (8 + 1 - 4), 1.8];
+        depth = CASE_HEIGHT_TOP /* board */ + 1 /* magnet */ + WALL_THICKNESS_TOP;
+        mic_pos = [width / 2 - 1.5, height - (8 + 1 - 4), CASE_HEIGHT_TOP];
         difference() {
             cube([width, height, depth]);
             union() {
                 // microphone grid hole
                 translate(mic_pos) mic_hole();
                 // magnet detent
-                translate([width / 2 - 41/2, height / 2 - 13/2, 1.8]) cube([41, 13, 1.2]);
+                translate([width / 2 - 41/2, height / 2 - 13/2, CASE_HEIGHT_TOP]) cube([41, 13, 1.2]);
                 // screw holes
                 translate([1.25, 1.7, 0]) screw_hole();
                 translate([1.25, height / 2, 0]) screw_hole();
@@ -107,8 +111,8 @@ module bottom_shell() {
     height = BOARD_HEIGHT + BOARD_OVERSIZE + WALL_THICKNESS_FRONT_BACK * 2;
     difference() {
         // bottom shell
-        cube([width, height, WALL_THICKNESS_BOTTOM + 6.7]);
-        translate([0, 0, WALL_THICKNESS_BOTTOM + 6.7 - 4]) {
+        cube([width, height, WALL_THICKNESS_BOTTOM + CASE_HEIGHT_BOTTOM]);
+        translate([0, 0, WALL_THICKNESS_BOTTOM + CASE_HEIGHT_BOTTOM - 4]) {
             // screw holes (4mm deep)
             translate([1.25, 1.7, 0]) screw_thread();
             translate([1.25, height / 2, 0]) screw_thread();
@@ -137,12 +141,12 @@ module mic_hole() {
 
 module case(top ,bottom) {
     difference() {
-        bottom_shell_height = WALL_THICKNESS_BOTTOM + 6.7;
+        bottom_shell_height = WALL_THICKNESS_BOTTOM + CASE_HEIGHT_BOTTOM;
         union() {
             if (bottom) { color("green") bottom_shell(); }
             if (top) { translate([0, 0, bottom_shell_height]) color("red") top_cover(); }
         }
-        translate([WALL_THICKNESS_LEFT_RIGHT, WALL_THICKNESS_FRONT_BACK, WALL_THICKNESS_BOTTOM]) !board();
+        translate([WALL_THICKNESS_LEFT_RIGHT, WALL_THICKNESS_FRONT_BACK, WALL_THICKNESS_BOTTOM]) board();
     }
 }
 /*
@@ -151,8 +155,8 @@ module case(top ,bottom) {
 
 module button_real() {
     color("brown") {
-        translate([0, -2.7, -1.3]) cube([2.5, 5.8 - 0.4, 3 - 0.4]);
-        translate([2.5, -4, -2.5]) cube([BUTTON_BASE_THICKNESS, 8, 5]);
+        translate([0, -2.7, -1.3]) cube([2, 5.8 - 0.4, 3 - 0.4]);
+        translate([2, -4, -2.5]) cube([BUTTON_BASE_THICKNESS, 8, 5]);
     }
 }
 
