@@ -31,4 +31,9 @@
     (thermal_bridge_angle 45) (tstamp 8d010e50-6a77-415d-b25a-95cb0468240e))
   (pad "4" smd rect (at -1.37 0.65) (size 0.6 0.7) (layers "F.Cu" "F.Paste" "F.Mask")
     (thermal_bridge_angle 45) (tstamp 12379181-764a-4305-a197-96d344cc94cd))
+  (model "${KIPRJMOD}/lib/Sensor_Vishay.pretty/VEML3235SL.wrl"
+    (offset (xyz 1.5 0.75 0))
+    (scale (xyz 0.393700787 0.393700787 0.393700787))
+    (rotate (xyz 0 0 180))
+  )
 )
