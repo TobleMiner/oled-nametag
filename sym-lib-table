@@ -7,4 +7,5 @@
   (lib (name "Sensor_Vishay")(type "KiCad")(uri "${KIPRJMOD}/lib/Sensor_Vishay.kicad_sym")(options "")(descr ""))
   (lib (name "Sensor_Audio_ST")(type "KiCad")(uri "${KIPRJMOD}/lib/Sensor_Audio_ST.kicad_sym")(options "")(descr ""))
   (lib (name "MCU_Espressif_ESP32")(type "KiCad")(uri "${KIPRJMOD}/lib/MCU_Espressif_ESP32.kicad_sym")(options "")(descr ""))
+  (lib (name "BAV70_Small")(type "KiCad")(uri "${KIPRJMOD}/lib/BAV70_Small.kicad_sym")(options "")(descr ""))
 )
