@@ -3337,7 +3337,7 @@
     (property "Datasheet" "" (at 201.93 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "LCSC" "C966942" (at 201.93 86.36 0)
+    (property "LCSC" "C2937733" (at 201.93 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f3129597-2b54-44cb-b5b9-41d288e2785f))
